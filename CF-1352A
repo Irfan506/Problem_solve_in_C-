@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long t;
+    cin>>t;
+    while(t--)
+    {
+        long long flag=0,n,i=1,arr[100],j=1;
+        cin>>n;
+        while(n!=0)
+        {
+            int m=n%10;
+            if(m!=0)
+            {
+                arr[j]=m*i;
+                j++;
+                flag++;
+            }
+            i*=10;
+            n/=10;
+        }
+        cout<<flag<<endl;
+        for(int k=1; k<=flag; k++)
+        {
+            cout<<arr[k];
+            if(k!=flag)
+                cout<<" ";
+        }
+
+        cout<<endl;
+    }
+    return 0;
+}
